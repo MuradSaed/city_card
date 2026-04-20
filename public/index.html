@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+  <!-- <script src="<%= BASE_URL %>flv.js"></script> -->
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #app {}
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please
+        enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="relative"></div>
+  <!-- built files will be auto injected -->
+</body>
+
+<!-- <script>
+  var player = document.getElementById('videoElement');
+  if (flvjs.isSupported()) {
+    var flvPlayer = flvjs.createPlayer({
+      type: 'flv',
+      "isLive": true,//<====加个这个 
+      url: 'http://182.92.190.80:9092/rtp/34020000001320000019_34020000001320000001.live.flv',//<==自行修改
+      hasAudio: false,
+      hasVideo: true,
+      //withCredentials: false,
+      //cors: true
+
+    });
+    flvPlayer.attachMediaElement(videoElement);
+    flvPlayer.load(); //加载
+    flv_start();
+  }
+
+  function flv_start() {
+    player.play();
+  }
+
+  function flv_pause() {
+    player.pause();
+  }
+
+  function flv_destroy() {
+    player.pause();
+    player.unload();
+    player.detachMediaElement();
+    player.destroy();
+    player = null;
+  }
+
+  function flv_seekto() {
+    player.currentTime = parseFloat(document.getElementsByName('seekpoint')[0].value);
+  }
+
+
+  // ,{
+  // 		enableWorker: true,	// 开启多线程
+  // 		enableStashBuffer: false,
+  // 		lazyLoad: false,
+  // 		lazyLoadMaxDuration: 0,
+  // 		lazyLoadRecoverDuration: 0,
+  // 		deferLoadAfterSourceOpen: false,
+  // 		fixAudioTimestampGap: true,
+  // 		autoCleanupSourceBuffer: true,
+  // 	}
+</script> -->
+
+</html>
