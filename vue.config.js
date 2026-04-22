@@ -39,7 +39,11 @@ module.exports = defineConfig({
         },
       },
     },
-    allowedHosts: "all",
+    client: {
+      webSocketURL: 'auto://0.0.0.0/ws',
+    },
+    // 或者更具体的配置：
+    allowedHosts: 'all'
   },
   css: {
     loaderOptions: {

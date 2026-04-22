@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div id="app" v-if="islogin">
+    <div id="app" >
       <div class="time">
         <img class="time-img" src="../public/img/icon-time.png" />
         <div class="time-label">{{ time }}</div>
@@ -15,38 +15,38 @@
       </div>
 
       <div class="top-title">
-        <div style="margin-top: -30px; margin-left: 20px;font-size: 24px;line-height: 1;">阿勒泰地区数字农业农村平台</div>
+        <div style="margin-top: -30px; margin-left: 20px;font-size: 24px;line-height: 1;">霍尔果斯数字孪生城市名片平台</div>
       </div>
       <div class="top">
         <div class="top-left">
-          <div class="menu-item" :class="active == '1' ? 'active' : 'no-active'" @click="menuClick('1')">数字阿勒泰</div>
+          <div class="menu-item" :class="active == '1' ? 'active' : 'no-active'" @click="menuClick('1')">首页</div>
           <div class="menu-item margin-left zhuisu" @click="menuClick('2')" :class="active == '2' || active == '10' ? 'active' : 'no-active'">
-            耕地一张图
+            核心指标
           </div>
-          <!-- <div class="menu-item margin-left" :class="active == '3' ? 'active' : 'no-active'" @click="menuClick('3')">
-            权属一张图
-          </div> -->
+          <div class="menu-item margin-left" :class="active == '3' ? 'active' : 'no-active'" @click="menuClick('3')">
+            数字党建
+          </div>
           <div class="menu-item margin-left" :class="active == '4' ? 'active' : 'no-active'" @click="menuClick('4')">
-            种植一张图
+            数字政务
           </div>
         </div>
         <div class="top-right">
           <div class="menu-item margin-left" :class="active == '3' ? 'active' : 'no-active'" @click="menuClick('3')">
-            经营一张图
+            数字经济
           </div>
           <div class="menu-item margin-left" :class="active == '6' ? 'active' : 'no-active'" @click="menuClick('6')">
-            智能决策
+            数字社会
           </div>
           <div class="menu-item margin-left" :class="active == '7' ? 'active' : 'no-active'" @click="menuClick('7')">
-            物联网设备
+            数字文化
           </div>
-          <!-- <div class="menu-item margin-left zhuisu" :class="active == '8' || active == '9' ? 'active' : 'no-active'">
-            产品追溯
+          <div class="menu-item margin-left zhuisu" :class="active == '8' || active == '9' ? 'active' : 'no-active'">
+            平安霍城
             <div class="zhuisubox">
               <div class="item" @click="menuClick('8')">马铃薯</div>
               <div class="item" @click="menuClick('9')">驼奶粉</div>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
       <div class="left-bg"></div>
@@ -61,7 +61,7 @@
 
       </router-view>
     </div>
-    <login @onlogin="loginfun" v-else></login>
+    <!-- <login @onlogin="loginfun" v-else></login> -->
   </div>
 </template>
 
